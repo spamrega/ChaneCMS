@@ -1,0 +1,2 @@
+# ChaneCMS
+Internet shop script
