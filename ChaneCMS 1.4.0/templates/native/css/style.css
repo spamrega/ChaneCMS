@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	background: #e5e5e5;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+    background: rgba(0, 0, 0, 0.85);
+	display: flex;
+	font-weight: 300;
+	top: 0;
+    z-index: 1;
+}
+
+.logo {
+	line-height: 50px;
+    font-size: 23px;
+    color: #FFFFFF;
+    margin-left: 35px;
+	font-weight: 100;
+}
+
+menu {
+    list-style: none;
+    display: inline-flex;
+	height: 100%;
+    line-height: 50px;
+	color: #FFFFFF;
+	margin: auto;
+    margin-right: 28px;
+}
+
+menu > a {
+	padding: 0px 10px;
+}
+
+menu > a:hover {
+	background: #000;
+	transition: 0.3s;
+}
+
+.banner {
+	background: url('../img/banner_bg.png') no-repeat center;
+	height: 500px;
+	width: 100%;
+}
+
+/*
+Затемнение баннера
+.banner::after {
+	content: "";
+    height: 500px;
+    width: 100%;
+    margin: auto;
+	display: block;
+    background: rgba(0,0,0,0.5);
+	margin-top: 1px;
+}
+*/ 
+
+.content {
+	max-width: 1170px;
+	margin: auto;
+    background: #FFF;
+}
+
+.goods {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product {
+	width: 200px;
+	height: 185px;
+	box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.4);
+	transition: 0.3s;
+	margin: 17px;
+}
+
+.product:hover {
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.7);
+	transition: 0.3s;
+}
+
+.product > .product-image {
+	margin: 0px;
+	width: 200px;
+	height: 150px;
+}
+
+.product > a > .product-buy {
+    height: 35px;
+    margin-top: -4px;
+	display: flex;
+}
+
+.product > a >  .product-buy > .product-cart {
+	height: 35px;
+    width: 125px;
+	background: #ebebeb;
+	text-align: center;
+	line-height: 3;
+}
+
+.product > a >  .product-buy:hover {
+	cursor: pointer;
+}
+
+.product > a >  .product-buy > .product-price {
+	height: 35px;
+    width: 75px;
+    background: #1b1a1b;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.product > a >  .product-buy > .product-price::after {
+	content:"\20BD";
+}
+
+.product > a >  .product-buy > .product-cart > img {
+    height: 24px;
+	transition: 0.3s;
+}
+
+.product:hover > a >  .product-buy > .product-cart > img {
+	-moz-transform: rotate(360deg); /* Для Firefox */
+    -ms-transform: rotate(360deg); /* Для IE */
+    -webkit-transform: rotate(360deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(360deg); /* Для Opera */
+    transform: rotate(360deg);
+	transition: 0.3s;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	background: #1b1a1b;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.5);
+    line-height: 100px;
+    margin-top: 23px;
+}
+
+
+/* item page */
+
+.cap {
+	width: 100%;
+	height: 20px;
+}
+
+.item {
+	max-width: 1170px;
+	padding: 10px;
+	min-height: 500px;
+	position: relative;
+}
+
+.item > img {
+    max-width: 1150px;
+	box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.5);
+}
+
+.item > .title {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.item > .description {
+    margin-top: 5px;
+}
+
+.item > .description::before {
+	content: "Описание товара: ";
+	font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.item > .additional {
+	margin-top: 5px;
+}
+
+.item > .additional::before {
+	content: "Дополнительная информация: ";
+	font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.item > .buy-button > .buy {
+    width: 400px;
+    height: 50px;
+    background: #d0d0d0;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #808080;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    transition: 0.3s;
+}
+
+.item > .buy-button > .buy::after {
+    content:"\20BD";
+}
+
+.item > .buy-button > .buy:hover {
+    background: #bfbfbf;
+	transition: 0.3s;
+	width: 300px;
+	margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+	color: #000;
+}
+
+.fa {
+	transition: 0.3s;
+	color: #808080;
+}
+
+.buy:hover .fa{
+    -moz-transform: rotate(360deg); /* Для Firefox */
+    -ms-transform: rotate(360deg); /* Для IE */
+    -webkit-transform: rotate(360deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(360deg); /* Для Opera */
+    transform: rotate(360deg);
+	transition: 0.3s;
+}
+
+.buy:hover .fa::before{
+    color: #000;
+}
+
+
+/*PAYMENT*/
+
+.pay-form {
+	width: 350px;
+	padding-bottom: 15px;
+	margin: auto;
+	
+	background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
+
+.pay-form .head {
+	background-image: linear-gradient(to bottom, #fafafa, #f2f2f2);
+    background-repeat: repeat-x;
+	height: 55px;
+    line-height: 55px;
+	
+    color: #555;
+    float: left;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-right-radius: 3px;
+    padding: 0 15px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+	text-align: center;
+}
+
+.ways {
+    width: 100%;
+    margin-top: 62px;
+}
+
+.way-1 {
+	background: url('../../../img/ways_1.png');
+	width: 300px;
+	height: 100px;
+	margin: auto;
+	opacity: 0.5;
+}
+
+
+.way-2 {
+	background: url('../../../img/ways_2.png');
+	width: 300px;
+	height: 100px;
+	margin: auto;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+
+.way-1:hover,
+.way-2:hover {
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#email {
+    margin: auto;
+    margin-top: 5px;
+    width: 95%;
+}
+
+.ways-purchase {
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+    margin-top: 62px;
+}
+
+.pay-form-purchase .head {
+	background-image: linear-gradient(to bottom, #fafafa, #f2f2f2);
+    background-repeat: repeat-x;
+	height: 55px;
+    line-height: 55px;
+	
+    color: #555;
+    float: left;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-right-radius: 3px;
+    padding: 0 15px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+	text-align: center;
+}
+
+.pay-form-purchase {
+    width: 350px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
+
+.link {
+	cursor: pointer;
+}
+
+/* Spinner */
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #f7931a;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader {
+  color: #f7931a;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+    font-size: 28px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+.error {
+	display: block;
+	opacity: 0;
+	background: #d24141;
+    bottom: 100%;
+    color: #fff;
+    line-height: 1px;
+    padding: 10px 11px;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+    font-size: 12px;
+	
+	transition: opacity 0.3s ease-out;
+}
+
+
+/* Purchase page */
+
+.ways-purchase {
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+    margin-top: 62px;
+}
+
+.pay-form-purchase .head {
+	background-image: linear-gradient(to bottom, #fafafa, #f2f2f2);
+    background-repeat: repeat-x;
+	height: 55px;
+    line-height: 55px;
+	
+    color: #555;
+    float: left;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-right-radius: 3px;
+    padding: 0 15px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+	text-align: center;
+}
+
+.pay-form-purchase {
+    width: 350px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
