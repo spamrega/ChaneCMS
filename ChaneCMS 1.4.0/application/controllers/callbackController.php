@@ -6,7 +6,7 @@ class callbackController
 	{
 		$db = Db::getConnection();
 		
-		if ($_SERVER["REMOTE_ADDR"] == '109.120.152.109') {
+		if ($_SERVER["REMOTE_ADDR"] != '') { //убрал проверку по IP
 			require_once(ROOT . '/models/indexModel.php');
 			require_once(ROOT . '/models/itemModel.php');
 			
